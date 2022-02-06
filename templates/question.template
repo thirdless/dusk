@@ -1,0 +1,7 @@
+Sorry in advance if this has been asked before, but my google skills are failing me.
+
+Basically I'm creating a widget that's meant to be embedded onto 3rd party sites. Think of something like disqus or intercom. What I want to do is have the user use the widget and submit a post that goes to my servers. In that request, if a user is logged in on the 3rd party site, I want their username (or some other account details) associated with the post.
+
+From looking at docs of other companies doing this, I usually see them asking to put the username in a json field that gets sent as part of the request. The issue is, I don't see anything preventing say user1 modifying the value and sending their username as user2.
+
+Is there a way to get around that problem? I was thinking of the server side generating an HMAC of the request upon rendering the page. Are there any best practices for doing this sort of thing?
